@@ -1,0 +1,11 @@
+{
+  "name": "vercel-minimal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "George MacKerron",
+  "license": "ISC",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.1.13"
+  }
+}
