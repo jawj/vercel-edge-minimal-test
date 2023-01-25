@@ -1,6 +1,11 @@
 
 import { Client } from '@neondatabase/serverless';
 
+export const config = {
+  runtime: 'experimental-edge',
+  regions: ['fra1'],
+};
+
 declare global {
   const process: { env: { DATABASE_URL: string } };
 }
@@ -13,6 +18,3 @@ export default async (req: Request) => {
   return new Response(now);
 };
 
-export const config = {
-  runtime: 'experimental-edge',
-};
