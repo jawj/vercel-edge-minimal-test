@@ -20,11 +20,10 @@ export default async (req: Request) => {
 
   const sites = await db
     .selectFrom('whc_sites_2021')
-    .select(['id_no', 'name_en', 'category'])
-    .select(distance.as('distance'))
+    .select(['id_no', 'name_en', 'category', distance.as('distance')])
     .orderBy(distance)
     .limit(10)
     .execute();
 
-  return new Response(JSON.stringify(sites));
+  return new Response(JSON.stringify(sites, null, 2));
 }
